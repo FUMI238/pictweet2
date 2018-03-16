@@ -29,7 +29,7 @@ class TweetsController < ApplicationController
 
   def show
     @tweet = Tweet.find(params[:id])
-    @commets = @tweet.comments.includes(:user)
+    @comments = @tweet.comments.includes(:user)
   end
 
   private
